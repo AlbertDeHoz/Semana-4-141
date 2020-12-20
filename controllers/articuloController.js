@@ -18,7 +18,7 @@ const update = async (req, res) => {
     res.status(200).json(articulo)
 }
 const activate = async (req, res) => {
-    const {id} = await Articulo.findOne({where:{ nombre:req.body.nombre}})
+    const {id} = await Articulo.findOne({where:{ id:req.body.id}})
     const articulo = await Articulo.update({estado:1},{
         where:{
             id:id
@@ -28,7 +28,7 @@ const activate = async (req, res) => {
 }
 
 const deactivate = async (req, res) => {
-    const {id} = await Articulo.findOne({where:{ nombre:req.body.nombre}})
+    const {id} = await Articulo.findOne({where:{ id:req.body.id}})
     const articulo = await Articulo.update({estado:0},{
         where:{
             id:id

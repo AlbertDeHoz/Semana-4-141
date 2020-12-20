@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const articuloController = require('../../controller/articuloController');
-const auth= require('../../middleware/auth')
+const articuloController = require('../../controllers/articuloController');
+const auth= require('../../middlewares/auth')
 
-router.get('/list',auth.Almacenero,articuloController.list);
-router.post('/add',auth.Almacenero,articuloController.add);
-router.put('/update',auth.Almacenero,articuloController.update);
-router.put('/activate',auth.Administrador,articuloController.activate);
-router.put('/deactivate', auth.Administrador,articuloController.deactivate);
+router.get('/list',articuloController.list);
+router.post('/add',articuloController.add);
+router.put('/update',articuloController.update);
+router.put('/activate',articuloController.activate);
+router.put('/deactivate',articuloController.deactivate);
 
 
 
