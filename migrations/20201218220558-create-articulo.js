@@ -21,8 +21,14 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       categoriaId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: { // User belongsTo Company 1:1
+          model: 'Categoria',
+          key: 'id'
+        }
       },
+      
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
