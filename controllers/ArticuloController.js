@@ -1,7 +1,15 @@
 const {Articulo} = require('../models/');
+const {Categoria} = require('../models/');
 
 const list = async (req,res)=> {
-    const articulo = await Articulo.findAll(req.body);
+    const articulo = await Articulo.findAll({
+        include:{
+            model: Categoria,
+            as:'categoria',
+            required: true,
+            atributes:['nombre']
+        }
+    });
     res.status(200).send(articulo)
 }
 const add = async (req, res) => {
