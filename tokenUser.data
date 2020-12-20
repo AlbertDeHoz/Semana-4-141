@@ -1,0 +1,33 @@
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwibmFtZSI6InBydWViYSIsImVtYWlsIjoicHJ1ZWJhQG1haWwuY29tIiwicm9sIjoiVmVuZGVkb3IiLCJpYXQiOjE2MDc5ODg2ODQsImV4cCI6MTYwODA3NTA4NH0.Ai_GmbvL5LHEiZo8KQEjB2b1rtVc6Xd9_oNEQouwGXY
+
+
+ejemplo@mail.com
+Almacenero
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiZW1haWwiOiJlamVtcGxvQG1haWwuY29tIiwicm9sIjoiQWxtYWNlbmVybyIsImlhdCI6MTYwODQwNzEyOSwiZXhwIjoxNjA4NDkzNTI5fQ.onN4zgJ9s7zH0AlJjvipLHBi-OqQzRPBKw05kC_gNn4
+
+{
+    "tokenReturn": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJwcnVlYmFAZ21haWwuY29tIiwicm9sIjoiQWRtaW5pc3RyYWRvciIsImlhdCI6MTYwODQwODQ0NCwiZXhwIjoxNjA4NDk0ODQ0fQ.xgZJoCBCzNCCG2GAmiV-XgkjI7hb91zCG6EJ1rh7MNw",
+    "user": {
+        "id": 1,
+        "rol": "Administrador",
+        "nombre": "carlos",
+        "password": "$2y$08$FTP/jKGNASwJf0ero7SBe.kQmUsOSjWYupPZ6/lS6en6RcithXFKO",
+        "email": "prueba@gmail.com",
+        "estado": null,
+        "createdAt": "2020-12-18T22:44:13.060Z",
+        "updatedAt": "2020-12-18T22:44:13.060Z"
+    }
+},
+{
+    "tokenReturn": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJ2ZW5kZWRvckBtYWlsLmNvbSIsInJvbCI6IlZlbmRlZG9yIiwiaWF0IjoxNjA4NDA4NTc5LCJleHAiOjE2MDg0OTQ5Nzl9.JpQPoUMy3s_molREs2gM_CIs_QOX0OGWjtJTqYq3IzI",
+    "user": {
+        "id": 3,
+        "rol": "Vendedor",
+        "nombre": "Vendedor",
+        "password": "$2a$10$Qul/rtDu6juMqZy/aS7SaezFx/IHSNnGE46UH0icuxF0k57unlm2K",
+        "email": "vendedor@mail.com",
+        "estado": 1,
+        "createdAt": "2020-12-19T20:09:27.431Z",
+        "updatedAt": "2020-12-19T20:09:27.431Z"
+    }
+}

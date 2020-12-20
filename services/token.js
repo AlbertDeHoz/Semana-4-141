@@ -16,20 +16,20 @@ module.exports ={
     },
     decode: async (token)=>{
         try{
-            const {id} = jwt.verify(token,tokenKey.secret);
+            const {id} = jwt.verify(token,tokenKey.secret)
             const user = await Usuario.findOne({
                 where:{
                     id:id,
                 }
             })
             if (user){
-                return user                
+                return user            
             }else{
                 return false
             }
 
         }catch(error){
-            return {error:error}
+            return {error:'token aqui'}
         }
 
         
