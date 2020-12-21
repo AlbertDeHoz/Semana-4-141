@@ -3,32 +3,31 @@ const tokenService = require('../services/token');
 //const {Usuario} = require('../models/');
 
 
-exports.checkToken = async (req, res, next) =>{
+exports.Vendedor = async (req, res, next) =>{
     if (!req.headers.token){
         return res.status(404).send({ error: 'Token Not Found'})
     }
     const tokenUsuario = req.headers.token
     const user = await tokenService.decode(tokenUsuario)
-    if (user.rol === 'Almacenero' || user.rol === 'Administrador'){
-        res.send(user);
+    if (user.rol === 'Almacenero' || user.rol === 'Administrador' || user.rol === 'Vendedor'){
+        next()
     }else{
         res.status(403).send({error:'usuario no autorizado'})
     }
 };
 
-/*
+
 exports.Administrador = async (req, res, next) =>{
-    if (!req.headers.tokenService){
+    if (!req.headers.token){
         return res.status(404).send({ error: 'Token Not Found'})
     }
-    const tokenUsuario = req.headers.tokenService
+    const tokenUsuario = req.headers.token
     const user = await tokenService.decode(tokenUsuario)
     if (user.rol==='Administrador'){
         next();
     }else if(!user){
-        return res.send('error, usuario no existe')
-    }
-    else if(user.error){
+        return res.status(401).send('error, usuario no existe')
+    }else if(user.error){
         return res.send('error, token no existe')
     }
     else{
@@ -36,7 +35,7 @@ exports.Administrador = async (req, res, next) =>{
     }
 
 };
-*/
+
 exports.Almacenero = async (req, res, next) =>{
     if (!req.headers.token){
         return res.status(404).send({ error: 'Token Not Found'})
@@ -55,7 +54,7 @@ exports.Almacenero = async (req, res, next) =>{
         return res.status(403).send({message:'No autorizado'})
     }
 }  
-
+/*
 module.exports = {
     verifyUsuario: async(req, res, next) => {
         if (!req.headers.tokenService) {
@@ -74,3 +73,4 @@ module.exports = {
     },
 
 }
+*/

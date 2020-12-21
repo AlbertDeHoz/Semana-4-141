@@ -5,10 +5,10 @@ const auth = require('../middlewares/auth');
 
 const router = routerx();
 router.get('/list', articuloController.list);
-router.post('/add', articuloController.add);
-router.put('/update', articuloController.update);
-router.put('/activate', articuloController.activate);
-router.put('/deactivate',articuloController.deactivate);
+router.post('/add',auth.Almacenero, articuloController.add);
+router.put('/update',auth.Almacenero, articuloController.update);
+router.put('/activate', auth.Almacenero,articuloController.activate);
+router.put('/deactivate',auth.Almacenero, articuloController.deactivate);
 
 
 router.get('/list', articuloController.list);

@@ -10,7 +10,7 @@ const list = async (req,res)=> {
             atributes:['nombre']
         }
     });
-    res.status(200).send(articulo)
+    res.status(200).json(articulo)
 }
 const add = async (req, res) => {
     const articulo = await Articulo.create(req.body);
