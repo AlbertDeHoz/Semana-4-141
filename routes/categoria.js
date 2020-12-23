@@ -4,7 +4,7 @@ const auth = require('../middlewares/auth')
 
 
 
-router.get('/list' ,auth.Almacenero,categoriaController.list);
+router.get('/list' ,categoriaController.list);
 router.post('/add',auth.Almacenero, categoriaController.add);
 router.put('/update',auth.Almacenero, categoriaController.update);
 router.put('/activate',auth.Almacenero, categoriaController.activate);
